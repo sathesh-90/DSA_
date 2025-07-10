@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class C {
+public class C{
     public static void main(String[] args) {
         int[] arr = {1, 1, 2, 2, 3}; 
         int i = 0;
