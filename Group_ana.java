@@ -9,12 +9,16 @@ class Solution {
             Arrays.sort(c);
             String key = new String(c);
             
-            if (!map.containsKey(key)) {
-                map.put(key, new ArrayList<>());
-            }
-            map.get(key).add(w);
+            if (map.containsKey(key)) {
+            		map.get(key).add(w);
+        }
+        else{
+        	ArrayList <String> str = new ArrayList<>();
+        	str.add(w);
+        	map.put(key,str);
         }
 
         return new ArrayList<>(map.values());
     }
+
 }
