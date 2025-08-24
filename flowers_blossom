@@ -1,0 +1,33 @@
+class Solution(object):
+    def minDays(self, bloomDay, m, k):
+        n = len(bloomDay)
+        
+        # Not enough flowers overall
+        if m * k > n:
+            return -1
+
+        def canMake(day):
+            """Check if we can make at least m bouquets by 'day'."""
+            bouquets, flowers = 0, 0
+            for bloom in bloomDay:
+                if bloom <= day:
+                    flowers += 1
+                    if flowers == k:
+                        bouquets += 1
+                        flowers = 0
+                else:
+                    flowers = 0
+            return bouquets >= m
+
+        left, right = min(bloomDay), max(bloomDay)
+        res = -1
+        
+        # Binary search for minimum valid day
+        while left <= right:
+            mid = (left + right) // 2
+            if canMake(mid):
+                res = mid
+                right = mid - 1  # try smaller day
+            else:
+                left = mid + 1  # need bigger day
+        return res
