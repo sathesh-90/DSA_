@@ -1,0 +1,21 @@
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        seen = set()
+        left = 0
+        max_len = 0
+
+        for right in range(len(s)):
+            # If char already in window, shrink from left
+            while s[right] in seen:
+                seen.remove(s[left])
+                left += 1
+            # Add current char
+            seen.add(s[right])
+            # Update max length
+            max_len = max(max_len, right - left + 1)
+
+        return max_len
