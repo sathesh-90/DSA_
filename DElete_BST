@@ -1,0 +1,55 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution(object):
+    def deleteNode(self, root, key):
+        """
+        :type root: Optional[TreeNode]
+        :type key: int
+        :rtype: Optional[TreeNode]
+        """
+
+        # Base case
+        if not root:
+            return None
+
+        # Step 1: Traverse to find the node
+        if key < root.val:
+            root.left = self.deleteNode(root.left, key)
+        elif key > root.val:
+            root.right = self.deleteNode(root.right, key)
+
+        else:
+            # Step 2: Node found -> handle 3 cases
+
+            # Case 1: No left child
+            if not root.left:
+                return root.right
+
+            # Case 2: No right child
+            elif not root.right:
+                return root.left
+
+            # Case 3: Two children
+            else:
+                # Find inorder successor (min in right subtree)
+                min_larger_node = self.findMin(root.right)
+
+                # Replace value
+                root.val = min_larger_node.val
+
+                # Delete successor recursively
+                root.right = self.deleteNode(root.right, min_larger_node.val)
+
+        return root
+
+
+    def findMin(self, node):
+        """Helper function to find the minimum value node in a subtree"""
+        while node.left:
+            node = node.left
+        return node
