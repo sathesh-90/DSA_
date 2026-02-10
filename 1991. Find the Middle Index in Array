@@ -1,0 +1,13 @@
+class Solution(object):
+    def findMiddleIndex(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        su=sum(nums)
+        l=0
+        for i,n in enumerate(nums):
+            if l==su-l-n:
+                return i
+                l+=n
+        return -1    
