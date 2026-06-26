@@ -22,10 +22,10 @@ This repository contains my solutions to various DSA problems from different cod
 
 ---
 ## 📝 Solution Format Each solution includes: 
-- ✔️ Optimized Code 
-- ✔️ Time Complexity 
-- ✔️ Space Complexity 
-- ✔️ Clean & Readable Implementation 
+-  Optimized Code 
+-  Time Complexity 
+-  Space Complexity 
+-  Clean & Readable Implementation 
 --- 
 ## 🚀 Progress This repository is updated regularly as I solve new problems and learn advanced algorithms. ---
 --- 
