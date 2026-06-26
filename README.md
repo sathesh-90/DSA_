@@ -21,7 +21,15 @@ This repository contains my solutions to various DSA problems from different cod
 - ☕ Java
 
 ---
-## 📝 Solution Format Each solution includes: - ✔️ Optimized Code - ✔️ Time Complexity - ✔️ Space Complexity - ✔️ Clean & Readable Implementation --- ## 🚀 Progress This repository is updated regularly as I solve new problems and learn advanced algorithms. ---
---- ## ⭐ Support If you find this repository helpful, please consider giving it a **⭐ Star**. 
+## 📝 Solution Format Each solution includes: 
+- ✔️ Optimized Code 
+- ✔️ Time Complexity 
+- ✔️ Space Complexity 
+- ✔️ Clean & Readable Implementation 
+--- 
+## 🚀 Progress This repository is updated regularly as I solve new problems and learn advanced algorithms. ---
+--- 
+## ⭐ Support
+If you find this repository helpful, please consider giving it a **⭐ Star**. 
 
 Happy Coding! 🚀
